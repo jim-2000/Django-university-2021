@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}
+         Student Signup
+{% endblock title %}
+
+{% block css %}
+  
+{% endblock css %}
+
+
+
+{% block content %}
+
+<div class="row px-5 py-5">
+    <div class="col align-self-center">
+        <div class="shadow-lg">
+            <h1 class="text-center py-3 shadow-lg">Log in as a <span class="text-warning">Student</span></h1>
+            <form method="POST" class="p-5"> {% csrf_token %}
+                {{form.as_p}}
+                <input type="submit" class="btn btn-primary" value="submit" />
+            </form>
+        </div>
+    </div>
+</div>
+	
+
+      
+{% endblock content %}
+
+
+
+{% block script %}
+  
+{% endblock script %}

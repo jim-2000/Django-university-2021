@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+
+{% block title %}
+         {{single_course.course_name}}
+{% endblock title %}
+{% load static %}
+{% block css %}
+  
+{% endblock css %}
+
+
+
+{% block content %}
+
+	
+<div class="all-title-box">
+    <div class="container text-center">
+        <h1> {{single_course.course_name}}<span class="m_1">Lorem Ipsum dolroin gravida nibh vel velit.</span></h1>
+    </div>
+</div>
+
+<div id="overviews" class="section wb">
+    <div class="container">
+        <div class="row"> 
+            <div class="col-lg-9 blog-post-single">
+                <div class="blog-item">
+                    <div class="image-blog">
+                        <img src="{{ single_course.imag_back.url  }}" alt="" class="img-fluid">
+                    </div>
+                    <div class="post-content">
+                        <div class="post-date">
+                            <span class="month">{{single_course.created_course}}</span>
+                            <!-- <span class="month">Nov</span> -->
+                        </div>
+                        <div class="meta-info-blog">
+                            <!-- <span><i class="fa fa-calendar"></i> <a href="#">{{single_course.created_course}}</a> </span> -->
+                            <span><i class="fa fa-tag"></i>  <a href="#">{{single_course.course_name}}</a> </span>
+                        </div>
+                        <div class="blog-title">
+                            <h2><a href="#" title="">{{single_course.course_name}}</a></h2>
+                        </div>
+                        <div class="blog-desc">
+                            <p> What is including in this course.... it's come hare from db </p>
+                            <blockquote class="default">
+                               Exlusive is comeing :::--- Nulla nunc dui, tristique in semper vel, congue sed ligula. Nam dolor ligula, faucibus id sodales in, auctor fringilla libero. Pellentesque pellentesque eget tempor tellus. Fusce lacinia tempor malesuada. Ut lacus sapien, placerat a ornare nec, elementum sit amet felis. Maecenas pretium lorem hendrerit eros sagittis fermentum.
+                            </blockquote>
+                            <p>{{single_course.courses_details}}</p>
+                        </div>							
+                    </div>
+                </div>
+                
+                <div class="blog-author">
+                    <div class="author-bio">
+                        <h3 class="author_name"><a href="#">Course user name is hare </a></h3>
+                        <h5>teacher position  <a href="#">Educative</a></h5>
+                        <p class="author_det">
+                            teacher short description is hare ........
+
+                            ulla nunc dui, tristique in semper vel, congue sed ligula. Nam dolor ligula, faucibus id sodales in, auctor fringilla libero. Pellentesque pellentesque eget tempor tellus. Fusce lacinia tempor malesuada. Ut lacus sapien, 
+                        </p>
+                    </div>
+                    <div class="author-desc">
+                        <img src="{% static 'images/author.jpg' %}" alt="about author">
+                        <ul class="author-social">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-skype"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+      <hr>
+{% endblock content %}
+
+
+
+{% block script %}
+  
+{% endblock script %}
